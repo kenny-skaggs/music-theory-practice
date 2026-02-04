@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://2cv7a352fimj"]
+
+[ext_resource type="Script" uid="uid://cqv4vggjvweuw" path="res://note_selection.gd" id="1_n47ol"]
+
+[node name="NoteSelection" type="Control" unique_id=153440927]
+layout_mode = 3
+offset_left = -300.0
+offset_top = -50.0
+offset_right = 300.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n47ol")
+
+[node name="button_container" type="FlowContainer" parent="." unique_id=59460488]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
+alignment = 1
+
+[node name="c_button" type="Button" parent="button_container" unique_id=1365201394]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+text = "C"
+
+[node name="d_button" type="Button" parent="button_container" unique_id=276507461]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+text = "D"
+
+[node name="e_button" type="Button" parent="button_container" unique_id=1997276956]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+text = "E"
+
+[node name="f_button" type="Button" parent="button_container" unique_id=873401272]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+text = "F"
+
+[node name="g_button" type="Button" parent="button_container" unique_id=2102489871]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+text = "G"
+
+[node name="a_button" type="Button" parent="button_container" unique_id=1413648866]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+text = "A"
+
+[node name="b_button" type="Button" parent="button_container" unique_id=80631862]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+text = "B"
+
+[connection signal="pressed" from="button_container/c_button" to="." method="_on_c_button_pressed"]
+[connection signal="pressed" from="button_container/d_button" to="." method="_on_d_button_pressed"]
+[connection signal="pressed" from="button_container/e_button" to="." method="_on_e_button_pressed"]
+[connection signal="pressed" from="button_container/f_button" to="." method="_on_f_button_pressed"]
+[connection signal="pressed" from="button_container/g_button" to="." method="_on_g_button_pressed"]
+[connection signal="pressed" from="button_container/a_button" to="." method="_on_a_button_pressed"]
+[connection signal="pressed" from="button_container/b_button" to="." method="_on_b_button_pressed"]

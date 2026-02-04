@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dqj3tdbpeo3ne"]
+
+[ext_resource type="Texture2D" uid="uid://ctflfhnh3j2xu" path="res://assets/bassClef.svg" id="1_8rt3v"]
+[ext_resource type="Script" uid="uid://dlddqj4pxam4r" path="res://cleff.gd" id="1_vprcj"]
+
+[node name="BassClef" type="Node2D" unique_id=604436036]
+script = ExtResource("1_vprcj")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=690861538]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.0
+offset_top = -57.0
+offset_right = 81.0
+offset_bottom = 83.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8rt3v")
+expand_mode = 1
+stretch_mode = 4

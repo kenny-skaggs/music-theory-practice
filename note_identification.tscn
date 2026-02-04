@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dge8nkgve83q5"]
+
+[ext_resource type="Script" uid="uid://b6qps78vtuegw" path="res://note_identification.gd" id="1_1l3ja"]
+[ext_resource type="PackedScene" uid="uid://br4jom0kb4e6w" path="res://staff.tscn" id="2_k117p"]
+[ext_resource type="PackedScene" uid="uid://d1hcgnw2jolmw" path="res://treble_clef.tscn" id="5_ho5vk"]
+[ext_resource type="PackedScene" uid="uid://dqj3tdbpeo3ne" path="res://bass_clef.tscn" id="6_lxufx"]
+[ext_resource type="PackedScene" uid="uid://2cv7a352fimj" path="res://note_selection.tscn" id="6_sedjs"]
+
+[node name="Control" type="Control" unique_id=694893418]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1l3ja")
+
+[node name="background" type="ColorRect" parent="." unique_id=856626177]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Staff" parent="." unique_id=688604114 instance=ExtResource("2_k117p")]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_left = 100.0
+offset_top = 40.0
+offset_right = -100.0
+offset_bottom = 120.0
+grow_horizontal = 2
+
+[node name="treble_cleff" parent="." unique_id=342873850 instance=ExtResource("5_ho5vk")]
+
+[node name="BassClef" parent="." unique_id=604436036 instance=ExtResource("6_lxufx")]
+
+[node name="NoteSelection" parent="." unique_id=153440927 instance=ExtResource("6_sedjs")]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -328.0
+offset_top = 311.0
+offset_right = 328.0
+offset_bottom = 375.0
+grow_vertical = 1
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="did_select" from="NoteSelection" to="." method="_on_note_selection_did_select"]

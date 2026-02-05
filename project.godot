@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Common="*uid://dc3s2gcjdqyft"
 
+[gui]
+
+theme/custom="uid://bu21rpjvggrcq"
+
 [input]
 
 primary_interact={

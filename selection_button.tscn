@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bsgjhp1vc0b5l"]
+
+[ext_resource type="Script" uid="uid://ctpswb7i67r55" path="res://selection_button.gd" id="1_s1bb5"]
+
+[node name="c_button" type="Button" unique_id=1760167472]
+custom_minimum_size = Vector2(70, 70)
+text = "C"
+script = ExtResource("1_s1bb5")
+metadata/_custom_type_script = "uid://ctpswb7i67r55"

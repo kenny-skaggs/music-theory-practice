@@ -38,26 +38,8 @@ func clear_incorrect_answers() -> void:
 	for button in button_container.get_children():
 		_clear_style(button)
 
-func _on_c_button_pressed() -> void:
-	did_select.emit(Common.PitchClass.C)
-
-func _on_d_button_pressed() -> void:
-	did_select.emit(Common.PitchClass.D)
-
-func _on_e_button_pressed() -> void:
-	did_select.emit(Common.PitchClass.E)
-
-func _on_f_button_pressed() -> void:
-	did_select.emit(Common.PitchClass.F)
-
-func _on_g_button_pressed() -> void:
-	did_select.emit(Common.PitchClass.G)
-
-func _on_a_button_pressed() -> void:
-	did_select.emit(Common.PitchClass.A)
-
-func _on_b_button_pressed() -> void:
-	did_select.emit(Common.PitchClass.B)
+func _on_button_pressed(pitch_class: Common.PitchClass) -> void:
+	did_select.emit(pitch_class)
 
 func _set_incorrect_style(button: Button) -> void:
 	button.add_theme_stylebox_override('normal', WrongSelectionStyle)

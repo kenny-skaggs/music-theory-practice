@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1770245719|85518505';
+const CACHE_VERSION = '1770315016|870981396';
 /** @type {string} */
 const CACHE_PREFIX = 'MusicNotes-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;

@@ -25,3 +25,6 @@ func _ready() -> void:
 			notes_by_name[note_name] = new_note
 
 			pitch_index += 1
+
+func is_mobile_system() -> bool:
+	return OS.has_feature('web_android') or OS.has_feature('web_ios')

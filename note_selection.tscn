@@ -3,19 +3,7 @@
 [ext_resource type="Script" uid="uid://cqv4vggjvweuw" path="res://note_selection.gd" id="1_n47ol"]
 [ext_resource type="PackedScene" uid="uid://bsgjhp1vc0b5l" path="res://selection_button.tscn" id="2_g24y7"]
 
-[node name="NoteSelection" type="Control" unique_id=153440927]
-layout_mode = 3
-anchors_preset = 0
-offset_left = -300.0
-offset_top = -50.0
-offset_right = 300.0
-offset_bottom = 50.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_n47ol")
-
-[node name="button_container" type="FlowContainer" parent="." unique_id=59460488]
-layout_mode = 1
+[node name="NoteSelection" type="FlowContainer" unique_id=185700045]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -24,44 +12,54 @@ grow_vertical = 2
 theme_override_constants/h_separation = 40
 theme_override_constants/v_separation = 40
 alignment = 1
+script = ExtResource("1_n47ol")
 
-[node name="c_button" parent="button_container" unique_id=1760167472 instance=ExtResource("2_g24y7")]
+[node name="group_1" type="FlowContainer" parent="." unique_id=788577260]
+layout_mode = 2
+vertical = true
+
+[node name="c_button" parent="group_1" unique_id=1760167472 instance=ExtResource("2_g24y7")]
 layout_mode = 2
 
-[node name="d_button" parent="button_container" unique_id=1424254076 instance=ExtResource("2_g24y7")]
+[node name="d_button" parent="group_1" unique_id=1424254076 instance=ExtResource("2_g24y7")]
 layout_mode = 2
 text = "D"
 pitch_class = 1
 
-[node name="e_button" parent="button_container" unique_id=435178177 instance=ExtResource("2_g24y7")]
+[node name="e_button" parent="group_1" unique_id=435178177 instance=ExtResource("2_g24y7")]
 layout_mode = 2
 text = "E"
 pitch_class = 2
 
-[node name="f_button" parent="button_container" unique_id=1019016903 instance=ExtResource("2_g24y7")]
+[node name="group_2" type="FlowContainer" parent="." unique_id=1217799801]
+layout_mode = 2
+vertical = true
+
+[node name="f_button" parent="group_2" unique_id=1019016903 instance=ExtResource("2_g24y7")]
 layout_mode = 2
 text = "F"
 pitch_class = 3
 
-[node name="g_button" parent="button_container" unique_id=1964283704 instance=ExtResource("2_g24y7")]
+[node name="g_button" parent="group_2" unique_id=1964283704 instance=ExtResource("2_g24y7")]
 layout_mode = 2
 text = "G"
 pitch_class = 4
 
-[node name="a_button" parent="button_container" unique_id=879296009 instance=ExtResource("2_g24y7")]
+[node name="a_button" parent="group_2" unique_id=879296009 instance=ExtResource("2_g24y7")]
 layout_mode = 2
 text = "A"
 pitch_class = 5
 
-[node name="b_button" parent="button_container" unique_id=643134732 instance=ExtResource("2_g24y7")]
+[node name="b_button" parent="group_2" unique_id=643134732 instance=ExtResource("2_g24y7")]
 layout_mode = 2
 text = "B"
 pitch_class = 6
 
-[connection signal="did_select" from="button_container/c_button" to="." method="_on_button_pressed"]
-[connection signal="did_select" from="button_container/d_button" to="." method="_on_button_pressed"]
-[connection signal="did_select" from="button_container/e_button" to="." method="_on_button_pressed"]
-[connection signal="did_select" from="button_container/f_button" to="." method="_on_button_pressed"]
-[connection signal="did_select" from="button_container/g_button" to="." method="_on_button_pressed"]
-[connection signal="did_select" from="button_container/a_button" to="." method="_on_button_pressed"]
-[connection signal="did_select" from="button_container/b_button" to="." method="_on_button_pressed"]
+[connection signal="resized" from="." to="." method="_on_resized"]
+[connection signal="did_select" from="group_1/c_button" to="." method="_on_button_pressed"]
+[connection signal="did_select" from="group_1/d_button" to="." method="_on_button_pressed"]
+[connection signal="did_select" from="group_1/e_button" to="." method="_on_button_pressed"]
+[connection signal="did_select" from="group_2/f_button" to="." method="_on_button_pressed"]
+[connection signal="did_select" from="group_2/g_button" to="." method="_on_button_pressed"]
+[connection signal="did_select" from="group_2/a_button" to="." method="_on_button_pressed"]
+[connection signal="did_select" from="group_2/b_button" to="." method="_on_button_pressed"]

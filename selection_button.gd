@@ -14,5 +14,8 @@ func _ready() -> void:
 	text = Common.PitchClass.keys()[pitch_class]
 	pressed.connect(_on_pressed)
 
+	if not Common.is_mobile_system():
+		custom_minimum_size = Vector2(40, 40)
+
 func _on_pressed() -> void:
 	did_select.emit(pitch_class)

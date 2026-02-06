@@ -3,8 +3,8 @@ extends Control
 const WideScreenBreakpoint := 800
 
 @onready var staff: Staff = $MarginContainer/BoxContainer/Staff
-@onready var treble_cleff: Node2D = $MarginContainer/BoxContainer/treble_cleff
-@onready var bass_clef: Node2D = $MarginContainer/BoxContainer/BassClef
+@onready var treble_cleff: Node2D = $MarginContainer/BoxContainer/Staff/treble_cleff
+@onready var bass_clef: Node2D = $MarginContainer/BoxContainer/Staff/BassClef
 @onready var note_selection: NoteSelection = $MarginContainer/BoxContainer/NoteSelection
 @onready var background: ColorRect = $background
 
@@ -31,15 +31,9 @@ func _set_note_position() -> void:
 
 func _position_cleffs() -> void:
 	var g4_position = staff.get_note_position(Common.notes_by_name['G4'])
-	treble_cleff.position = Vector2(
-		staff.position.x,
-		staff.position.y + g4_position.y
-	)
+	treble_cleff.position = Vector2(0, g4_position.y)
 	var f3_position = staff.get_note_position(Common.notes_by_name['F3'])
-	bass_clef.position = Vector2(
-		staff.position.x,
-		staff.position.y + f3_position.y
-	)
+	bass_clef.position = Vector2(0, f3_position.y)
 
 func _select_new_note() -> Note:
 	var note_name = note_list.pick_random()
@@ -65,6 +59,3 @@ func _on_resized() -> void:
 			note_selection.show_narrow_layout()
 		else:
 			note_selection.show_wide_layout()
-
-	if treble_cleff:
-		_position_cleffs()

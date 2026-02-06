@@ -27,4 +27,5 @@ func _ready() -> void:
 			pitch_index += 1
 
 func is_mobile_system() -> bool:
+	return true
 	return OS.has_feature('web_android') or OS.has_feature('web_ios')

@@ -17,5 +17,7 @@ func _ready() -> void:
 	if not Common.is_mobile_system():
 		custom_minimum_size = Vector2(40, 40)
 
+		theme.set_stylebox('hover', 'Button', StyleBoxLine.new())
+
 func _on_pressed() -> void:
 	did_select.emit(pitch_class)

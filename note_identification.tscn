@@ -47,9 +47,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 
-[node name="treble_cleff" parent="MarginContainer/BoxContainer" unique_id=342873850 instance=ExtResource("5_ho5vk")]
+[node name="treble_cleff" parent="MarginContainer/BoxContainer/Staff" unique_id=342873850 instance=ExtResource("5_ho5vk")]
 
-[node name="BassClef" parent="MarginContainer/BoxContainer" unique_id=604436036 instance=ExtResource("6_lxufx")]
+[node name="BassClef" parent="MarginContainer/BoxContainer/Staff" unique_id=604436036 instance=ExtResource("6_lxufx")]
 
 [node name="NoteSelection" parent="MarginContainer/BoxContainer" unique_id=153440927 instance=ExtResource("6_sedjs")]
 layout_mode = 2
